@@ -426,7 +426,7 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="logo">Legal<span>Tracker</span></div>
+    <div class="logo">Legal<span>track</span></div>
 
     <button class="nav-item active" onclick="switchTab('review',this)">
       <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -635,7 +635,9 @@
 <script>
 // ── Config ────────────────────────────────────────────────
 const SCRIPT_URL_KEY = 'legal_tracker_script_url';
-let SCRIPT_URL = localStorage.getItem(SCRIPT_URL_KEY) || '';
+// Paste your deployed Apps Script Web App URL here once — all colleagues connect automatically.
+const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJggB7loFcT-HY-x-oWFq8mrChrF5L8FQzA_fwmUf2YDzNPTIgRJ90Y91PXJr87WkkwQ/exec';
+let SCRIPT_URL = localStorage.getItem(SCRIPT_URL_KEY) || (DEFAULT_SCRIPT_URL !== 'YOUR_LEGAL_TRACKER_SCRIPT_URL_HERE' ? DEFAULT_SCRIPT_URL : '');
 
 let contracts = [];
 let currentTab = 'review';
